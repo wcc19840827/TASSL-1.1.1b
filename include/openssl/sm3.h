@@ -14,13 +14,12 @@
 # include <openssl/opensslconf.h>
 
 # ifdef OPENSSL_NO_SM3
+#  error SM3 is disabled.
+# endif
 
 #  ifdef __cplusplus
 extern "C" {
 #  endif
-
-#  error SM3 is disabled.
-# endif
 
 # define SM3_DIGEST_LENGTH 32
 # define SM3_WORD unsigned int

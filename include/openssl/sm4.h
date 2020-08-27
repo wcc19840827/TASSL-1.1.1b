@@ -15,13 +15,12 @@
 # include <openssl/e_os2.h>
 
 # ifdef OPENSSL_NO_SM4
+#  error SM4 is disabled.
+# endif
+
 #  ifdef __cplusplus
 extern "C" {
 #  endif
-
-
-#  error SM4 is disabled.
-# endif
 
 # define SM4_ENCRYPT     1
 # define SM4_DECRYPT     0
